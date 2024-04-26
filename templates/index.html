@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title> Millie Brigaud </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+        <script src="{{ url_for('static', filename='index.js') }}" defer></script>
+    </head>
+    <body>
+        <div class="container"> 
+            <header>
+                <nav>
+                    <div class="nav-container">
+                        <ul class="nav-object" id="nav-socials"> 
+                            <li><a href="https://www.linkedin.com/in/milliebrigaud/">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/MillieBrigaud">Twitter/X</a></li>
+                        </ul>
+                        <div class="nav-object" id="nav-name">Millie Brigaud</div>
+                        <ul class="nav-object" id="nav-directory">
+                            <li class="nav-button"><a href="{{ url_for('home_page') }}">Home</a></li>
+                            <li class="nav-button"><a href="{{ url_for('display_articles') }}">Stories</a></li>
+                            <!-- <li class="nav-button">Photos</li> -->
+                            <li class="nav-button"><a href="{{ url_for('contactForm') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="content">
+                    <div id="image">
+                        <img src="{{ url_for('static', filename='IMG_2187.jpeg')}}"/>
+                    </div>
+                    <div id="words"> 
+                        <!-- <h1 id="lede">I like to do it all– on-the-ground reporting, numbers crunching, investigating a dataset, and taking photos. </h1> -->
+                        <p id="miniBio">My journalism experience ranges from news reporting for the Christian Science Monitor and Rue89 Strasbourg to international affairs writing for Diplomatic Courier. I am also published in Ms. Magazine and by the Pulitzer Center. As a French and US dual citizen, I have reported in both countries and languages.</p>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div id="heading">
+                    <h1>Featured Articles</h1>
+                </div>
+                <!-- For this next block of code, I got help from Web Dev Simplified's youtube video on "How to Create an Animated Image Carousel with CSS/JavaScript" -->
+                <div class="featured-articles-container" data-container>
+                    <div class="flex-item">
+                        <button class="button" id="back" data-button="back">&#x25C0;</button>
+                    </div>
+                    <div class="flex-item">
+                        <ul data-articles>
+                            <li class="article" data-active>
+                                <a href="https://www.csmonitor.com/Environment/2023/0828/A-sinking-community-turns-to-oyster-shells-and-a-tax-for-safety"><img src="https://images.csmonitor.com/csm/2023/08/0828-NLEVEE-LEDE-donald.jpg?alias=standard_900x600nc"/></a>
+                                <h2>A sinking community turns to oyster shells – and a tax – for safety.</h1>
+                            </li>
+                            <li class="article">
+                                <a href="https://www.diplomaticourier.com/posts/hungry-and-mobilized-teachers-brave-zimbabwes-temper"><img src="https://assets-global.website-files.com/5fa4da31b6c3a45d2cfd2d5d/64184c6bc8c179a5a4d62bcc_zach-wear-0XVJ5iMtRrQ-unsplash.jpg"/></a>
+                                <h2>Hungry and Mobilized, Teachers Brave Zimbabwe’s Temper.</h1>
+                            </li>
+                            <li class="article">
+                                <a href="https://www.csmonitor.com/Environment/2023/0915/They-moved-to-Vermont-for-climate-safety.-Then-came-floods"><img src="https://images.csmonitor.com/csm/2023/09/1162075_3_0915%20NVERMONT%20FL_standard.jpg?alias=standard_900x600nc"/></a>
+                                <h2>They moved to Vermont for climate safety. Then came floods.</h1>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-item">
+                        <button class="button" id="next" data-button="next">&#x25B6;</button>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p>Website created by Millie Brigaud</p>
+            </footer>
+        </div>    
+    </body>
+</html>

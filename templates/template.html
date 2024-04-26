@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8"> 
+        <title> {{title}} </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block css %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        <div class="container"> 
+            <header>
+                <nav>
+                    <div class="nav-container">
+                        <ul class="nav-object" id="nav-socials"> 
+                            <li><a href="https://www.linkedin.com/in/milliebrigaud/">LinkedIn</a></li>
+                            <li><a href="https://twitter.com/MillieBrigaud">Twitter/X</a></li>
+                        </ul>
+                        <div class="nav-object" id="nav-name">Millie Brigaud</div>
+                        <ul class="nav-object" id="nav-directory">
+                            <li class="nav-button"><a href="{{ url_for('home_page') }}">Home</a></li>
+                            <li class="nav-button"><a href="{{ url_for('display_articles') }}">Stories</a></li>
+                            <!-- <li class="nav-button">Photos</li> -->
+                            <li class="nav-button"><a href="{{ url_for('contactForm') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <footer>
+                <p>Website created by Millie Brigaud</p>
+            </footer>
+        </div>    
+    </body>
+</html>

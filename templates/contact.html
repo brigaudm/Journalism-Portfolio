@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+{% endblock %}
+
+{% block content %}
+<section class="form-boxes">
+    <!-- I looked at the MDN webpage on html forms for guidance on how to code this. The page is called "Your First Form"-->  
+`           <h1>Contact Me</h1>
+    <form action="/contact-storage" method="post">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+                <label for="message">Message:</label>
+                <textarea id="message" name="user_message"> </textarea>
+            </li>
+        </ul>
+        <li class="button">
+            <button type="submit">SEND</button>
+        </li>
+    </form>
+</section>
+{% endblock %}

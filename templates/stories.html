@@ -1,0 +1,27 @@
+{% extends "template.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='stories.css') }}">
+{% endblock %}
+
+{% block content %}
+<table> 
+    <!-- <tr>
+        <th> </th>
+        <th>Article</th>
+        <th>Publication</th>
+        <th>Date</th>
+        <th>Tags</th>
+    </tr> -->
+    {%for row in data%}
+    <tr>
+        <td>{{row[0]}}</td>
+        <td>{{row[1]}}</td>
+        <td>{{row[2]}}</td>
+        <td>{{row[3]}}</td>
+        <td>{{row[4]}}</td>
+        <td>{{row[5]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
