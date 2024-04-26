@@ -1,4 +1,4 @@
-# Journalism-Portfolio
+# Journalism Portfolio
 I made this dynamic web application to showcase my journalism experience. It uses Flask, Jinja, and SQLite. I've coded in Python, JavaScript, HTML, and CSS. I've also used the SQLite and Jinja documentation to create and populate data tables and create html templates. 
 
 The app introduces me as a journalist, pulls data about my published articles from a data base, and allows people to contact me by pushing their name, email, and message to a database. 
@@ -13,7 +13,7 @@ List of features:
 - Contact form with a security features to 1. keep people from putting non-emails in the email box 2. not reveal the contents of the form in the URL (POST versus GET methods). 
 - Contact data is pushed to an SQLite table and can be viewed at the route /view_contact_data
 
-## (Outside of course materials) resources I used:
+## Resources I used
 ### Journalist portfolio ideas came from journoportfolio.com
 ### html and css help: 
 - FlexBox refresher: https://www.youtube.com/watch?v=aRMIdKRYg6c&list=PLoYCgNOIyGABDU532eesybur5HPBVfC1G&index=6 
